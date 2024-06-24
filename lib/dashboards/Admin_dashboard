@@ -1,0 +1,160 @@
+import 'package:flutter/material.dart';
+
+class AdminHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Admin Dashboard'),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text(
+                'Admin Menu',
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('Home'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Route Creation'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => RouteCreationScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('View Routes'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ViewRoutesScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('New Registration'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => NewRegistrationScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Latest Update'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LatestUpdateScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Reports'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ReportsScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Logout'),
+              onTap: () {
+                // Handle logout logic
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
+      body: Center(
+        child: Text('Welcome to the Admin Dashboard!'),
+      ),
+    );
+  }
+}
+
+// Placeholder widgets for each screen
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Home'),
+      ),
+      body: Center(
+        child: Text('Home Screen'),
+      ),
+    );
+  }
+}
+
+class RouteCreationScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Route Creation'),
+      ),
+      body: Center(
+        child: Text('Route Creation Screen'),
+      ),
+    );
+  }
+}
+
+class ViewRoutesScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('View Routes'),
+      ),
+      body: Center(
+        child: Text('View Routes Screen'),
+      ),
+    );
+  }
+}
+
+class NewRegistrationScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('New Registration'),
+      ),
+      body: Center(
+        child: Text('New Registration Screen'),
+      ),
+    );
+  }
+}
+
+class LatestUpdateScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Latest Update'),
+      ),
+      body: Center(
+        child: Text('Latest Update Screen'),
+      ),
+    );
+  }
+}
+
+class ReportsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Reports'),
+      ),
+      body: Center(
+        child: Text('Reports Screen'),
+      ),
+    );
+  }
+}
+
